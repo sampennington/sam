@@ -6,7 +6,7 @@ export function HomeSection() {
           Hey! I'm Sam 👋
         </h1>
         <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mt-12">
-          Engineer, Manager, Cave Diver
+          Software Engineer, Manager, Cave Diver
         </p>
         <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mt-12">
           This page is about me, what i'm proud of, and what i'm working on.

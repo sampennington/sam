@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
@@ -84,6 +85,20 @@ export default async function Blog({ params }) {
           }),
         }}
       />
+      <Link
+        href="/"
+        className="inline-flex items-center gap-2 text-black hover:text-gray-700 transition-colors mb-8 group"
+      >
+        <svg
+          className="w-5 h-5 transition-transform group-hover:-translate-x-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span className="font-medium">Back to home</span>
+      </Link>
       <div className="mb-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black">
           {post.metadata.title}

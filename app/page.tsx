@@ -12,8 +12,8 @@ export default function Page() {
 
       <div className="flex-1 ml-24">
         <HomeSection />
-        <ProjectsSection />
         <AboutSection />
+        <ProjectsSection />
         <ContactSection />
         <CVSection />
 
