@@ -1,0 +1,193 @@
+---
+title: "How I Led Localisation at VEED"
+publishedAt: "2024-01-15"
+summary: "Leading a cross-functional localization project across 8+ codebases and 10+ teams, resulting in 8-18% revenue uplift in international markets."
+---
+
+# How I Led Localisation at VEED
+
+When I was at **VEED**, leadership announced that we'd be **localising the entire platform** the following quarter. It was an exciting initiative — but also a chaotic one. There wasn't a clear plan, no one really owned it, and most teams already had jam-packed roadmaps.
+
+Rather than let it fizzle out (and stress everyone out in the process), I decided to step up and bring some structure to it. I proposed that one of my teams lead the localisation effort — creating a clear point of contact, setting direction, and actually getting it shipped.
+
+---
+
+## The Challenges
+
+This wasn’t a super-technical project — at least not at first glance.  
+We just needed to serve a different set of copy depending on language, right?
+
+The tricky parts turned out to be:
+- **Communication** – The project touched 8+ codebases and 10+ teams. Everyone needed to stay in sync and keep their own roadmaps aligned.  
+- **Maintaining translation quality** – Automated translations can get weird fast.  
+- **Catching missing translations** – Avoiding the dreaded `{{hero.button.copy}}` showing up in production.  
+- **Measuring impact** – Making sure all this effort actually moved the needle.
+
+---
+
+## Execution
+
+We started from scratch: choosing tools, setting up infrastructure, and building the workflows.  
+We landed on **Lokalise**, **i18next**, and a few **custom tools** we built along the way.
+
+Everything was **feature-flagged**, since we couldn’t launch localisation half-done.  
+Half the team went on a mission to extract and translate every bit of copy they could find (painfully manual work — if only we’d had Cursor back then 😅).  
+The rest set up language detection, selectors, and tooling.
+
+---
+
+### Building the First Custom Tool
+
+Pretty quickly, we hit our first big issue: **untranslated keys slipping through**.  
+Occasionally, users would see things like `{{hero.button.copy}}` — not ideal.
+
+We knew this would keep happening as more teams joined in, so we built our first internal tool:
+
+**🛠️ Translation Validator GitHub Action**
+- Validated that every key in our translation JSON files actually existed.  
+- If a key was missing, the PR simply couldn’t be merged.  
+
+This immediately stopped broken strings from hitting production. No more handlebars 🎉
+
+We rolled out localisation **section by section**, handing off each area to its owning team for testing and feedback before moving on.
+
+---
+
+### Keeping Everyone Aligned
+
+**Constant communication** was absolutely vital here:
+- Regularly liaising with teams to decide which areas we’d tackle next.  
+- Checking when they were free to test — translating a feature mid-refactor never ends well.  
+- Sending **twice-weekly updates** to leadership to keep everyone aligned.
+
+This was a real cross-team effort, and staying proactive with communication was the only reason it worked smoothly.
+
+---
+
+## Launch
+
+We decided not to launch partially translated pages — seeing half-English, half-Spanish content just didn’t feel right.
+
+Instead, we rolled out as an **A/B test**, starting small and gradually ramping up to a 50/50 split over a few days.  
+Once we hit significance, the results were clear.
+
+---
+
+## Results 🚀
+
+The results were huge — **8–18% uplift in exports and revenue** across our core language markets (Spanish, French, and a few others).
+
+On top of that, we:
+- Removed thousands of hard-coded strings.  
+- Improved collaboration across engineering and design.  
+- Set VEED up to expand internationally with confidence.
+
+---
+
+## What Came Next
+
+Of course, new problems popped up once localisation was live:
+- Developers were slowed down needing translations for every PR.  
+- Sometimes they’d forget, leaving bits of English copy on translated pages.  
+- Lokalise was pay-per-seat, and we definitely didn’t want to buy 60+ dev accounts.
+
+So… we built our **second custom tool**.
+
+**🤖 Auto-Translation PR Bot**
+- Listened for copy changes via GitHub webhooks.  
+- Triggered a Cloud Function to request translations from Lokalise.  
+- Automatically opened a PR with the translated copy.
+
+No more manual steps — devs didn’t have to log into Lokalise, request translations, or merge anything. It all just happened.
+
+Developer experience went way up. 🚀
+
+---
+
+## Final Thoughts
+
+This wasn’t the hardest project technically, but it was one of the most cross-functional and communication-heavy ones I’ve led.
+
+Localisation taught me that success in engineering isn’t just about the code — it’s about **ownership, clarity, and relentless communication**.  
+
+And yeah, we might’ve accidentally shipped a few `hero.copy` keys along the way… but that’s half the fun.
+
+
+
+
+
+
+
+
+
+
+
+# How I Led Localisation at VEED
+
+When I was at **VEED**, leadership announced that we’d be **localising the entire platform** the following quarter. It was an exciting initiative, but also a chaotic one. There wasn’t a clear plan, no one really owned it, and most teams were already stretched thin with jam packed roadmaps.
+
+Rather than let it fizzle out and cause stress, I decided to try own it, and bring some structure to the project. I proposed that one of my teams lead the localisation effort—creating a clear point of contact, setting direction, and ensuring we actually shipped.
+
+---
+
+The Challenges
+
+This wasn't a super technically complicated project, we just need to serve a different set of copy depending on language, right?
+
+The hard parts here were going to be:
+- Communication. This was a project that affected 8+ codebases, 10+ teams, everyone needed to be up to date and have their own roadmaps aligned. 
+- Maintaining good-enough translations
+- Not missing translations
+- Measuring impact
+
+
+## Execution
+
+We started from scratch, what tools to use: We opted for Lokalise, i18next, and some custom tools we built (more on them later!).
+We knew we couldn't release localisation unless it was complete, so feature flagged it in every codebase.
+Half the team then went ahead and started translating everything they could find. This was very manual, boring work. I only we waited a few months and cursor etc came about :facepalm:
+The rest went on to setup all our tooling, detecting language, language selectors and the like. 
+
+
+The first custom tool we needed:
+
+First issue we encountered, we were occasionaly letting untranslated keys get in, which meant we'd serve the dreaded `{{hero.button.copy}}` etc. With so many engineers that were going to need to do this, we knew it'd keep happening, so we made our first custom tool:
+- Translation validator Github Action - Which validated the keys in our JSON files of translations all existed. No translation? Coudln't be meeged. We immediatley stopped seeing issues like this, no more handlebars :tada: 
+
+
+We did this area by area, when one section was done we'd hand it off to the team for them to test as well, and raise any issues early. 
+
+
+** Constant Communication ** was really vital to success here. 
+- Liasing with other teams constantly -  which areas we were tackling next? When were they free to test? What's their roadmap? Translating a feature while they were updating it would be akward so we avoided it as much as we could. 
+- Twice-weekly updates on progress. Keeping stakeholders in the loop
+
+
+## Launch
+
+It was deemed not possible to launch part of the site first, seing part in english and part in spanish would be a bit crap... and we wanted to tread carefully, this was a big change!
+
+So we rolled out as an AB test to a small percentage of users to get data back. Over the coruse of a few days we reached a 50/50 split and quickly reached significance in most languages. 
+
+
+
+##  Result
+Resutls were pretty huge, 8-18% uplift in exports/revenue across our core language markets :rocket: 
+
+
+
+##  What happens next?
+A few issues start to arise we need solutions for:
+- Developers are being slowed down, needing to get translations on every copy touching PR. 
+- Sometimes forgetting to get translations, meaning we serve english copy to a translated page. 
+- We have a pay per seat plan with Lokalise, we don't want to get 60 devs seats to this
+
+
+So we needed a way to automate this. I built the second custom tool we needed here. It would:
+- Listen for any changes in copy and automatically create a pull request with the required translations. I did this in a cloud function Leveraging Lokalise + Github webhooks and API's.
+This made developer experience a lot better, there was no remembering to log in to lokalise, requesting transaltions, creating a PR, merging it in. Everything was just done. 
+
+---
+
+## Final Thoughts
+

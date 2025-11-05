@@ -2,11 +2,11 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import home from '../images/icons/home.png'
-import rocket from '../images/icons/rocket.png'
-import about from '../images/icons/about.png'
-import contact from '../images/icons/contact.png'
-import cv from '../images/icons/cv.png'
+import home from '@/app/images/icons/home.png'
+import rocket from '@/app/images/icons/rocket.png'
+import about from '@/app/images/icons/about.png'
+import contact from '@/app/images/icons/contact.png'
+import cv from '@/app/images/icons/cv.png'
 import Image from 'next/image'
 
 const navItems = [
