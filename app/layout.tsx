@@ -1,12 +1,15 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
+import { Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk'
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -47,16 +50,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
-        GeistSans.variable,
-        GeistMono.variable
+        'text-black bg-[#F5F1E8]',
+        spaceGrotesk.variable
       )}
+      style={{ fontFamily: 'var(--font-space-grotesk)' }}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
+      <body className="antialiased">
+        <main className="flex min-h-screen">
           {children}
-          <Footer />
           <Analytics />
           <SpeedInsights />
         </main>
