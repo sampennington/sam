@@ -61,7 +61,7 @@ export default async function Blog({ params }) {
   }
 
   return (
-    <section>
+    <section className="min-h-screen px-8 md:px-16 lg:px-32 py-20 max-w-5xl mx-auto">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -79,20 +79,33 @@ export default async function Blog({ params }) {
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: 'Sam Pennington',
             },
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+      <div className="mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black">
+          {post.metadata.title}
+        </h1>
+        <p className="text-lg text-gray-500">
           {formatDate(post.metadata.publishedAt)}
         </p>
+        <p className="text-xl text-black mt-4">
+          {post.metadata.summary}
+        </p>
       </div>
-      <article className="prose">
+      <article className="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-black
+        prose-h1:text-black prose-h2:text-black prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
+        prose-h3:text-black prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-black prose-p:leading-relaxed
+        prose-li:text-black prose-ul:text-black prose-ol:text-black
+        prose-strong:text-black prose-strong:font-bold
+        prose-em:text-black
+        prose-code:bg-gray-300 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:text-black
+        prose-pre:bg-gray-900 prose-pre:text-gray-100
+        prose-a:text-black prose-a:underline hover:prose-a:text-gray-700">
         <CustomMDX source={post.content} />
       </article>
     </section>

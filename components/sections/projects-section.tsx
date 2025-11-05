@@ -1,22 +1,27 @@
+import Link from 'next/link'
+
 export function ProjectsSection() {
   return (
     <section id="projects" className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 py-20">
       <div className="max-w-5xl w-full">
-        <h2 className="text-5xl md:text-6xl font-bold mb-12">Featured Projects</h2>
+        <h2 className="text-5xl md:text-6xl font-bold mb-12">Featured Projects & Writing</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
-            <h3 className="text-2xl font-bold mb-4">Project One</h3>
+          <Link href="/blog/localizing-veed" className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all block">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl">✍️</span>
+              <h3 className="text-2xl font-bold">How I Led Localisation at VEED</h3>
+            </div>
             <p className="text-gray-700 mb-4">
-              A revolutionary platform that transforms how users interact with complex data.
-              Built with React, TypeScript, and modern web technologies.
+              Leading a cross-functional localization project across 8+ codebases and 10+ teams.
+              We built custom tooling, automated translation workflows, and delivered an 8-18% revenue uplift in international markets.
             </p>
             <div className="flex gap-2 flex-wrap">
-              <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">React</span>
-              <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">TypeScript</span>
-              <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">Next.js</span>
+              <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">Leadership</span>
+              <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">i18n</span>
+              <span className="px-3 py-1 bg-gray-200 rounded-full text-sm">Automation</span>
             </div>
-          </div>
+          </Link>
 
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
             <h3 className="text-2xl font-bold mb-4">Project Two</h3>
