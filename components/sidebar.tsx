@@ -56,7 +56,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-24 flex flex-col items-center justify-center z-50">
+    <aside className="fixed md:left-0 md:top-0 md:h-screen md:w-24 md:flex-col bottom-0 left-0 right-0 h-20 w-full flex flex-row items-center justify-center z-50 bg-white/80 backdrop-blur-sm md:bg-transparent">
       {navItems.map((item, index) => (
         <Link
           key={item.href}
@@ -65,7 +65,7 @@ export function Sidebar() {
           onMouseLeave={() => setHoveredIndex(null)}
           className={`
             group flex flex-col items-center justify-center
-            w-16 h-16 rounded-2xl origin-left
+            w-16 h-16 rounded-2xl md:origin-left
             bg-white/80 backdrop-blur-sm hover:bg-white
             shadow-sm hover:shadow-md
             transition-all duration-300 ease-in-out

@@ -10,7 +10,7 @@ export default function Page() {
     <>
       <Sidebar />
 
-      <div className="flex-1 ml-24">
+      <div className="flex-1 md:ml-24 pb-24 md:pb-0">
         <HomeSection />
         <AboutSection />
         <ProjectsSection />

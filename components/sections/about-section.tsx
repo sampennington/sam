@@ -40,7 +40,7 @@ export function AboutSection() {
             />
             <Section
               heading="Personal life"
-              body="My favourite things to do in life are travel to places ive not been before and scuba dive. Most recently I've been living in Mexico learning to cave dive."
+              body="My favourite things to do are travel to places ive not been before and scuba dive. Most recently I've been living in Mexico learning to cave dive."
             />
           </div>
         </div>
