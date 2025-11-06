@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function LocalizingVeedPost() {
   return (
@@ -32,6 +33,17 @@ export default function LocalizingVeedPost() {
         <p>Leadership announced that we'd be localising the entire platform the following quarter.</p>
         <p>It was clearly going to be an impactful project - but it had no real plan or ownership yet.</p>
         <p>So my team stepped up to lead the effort, creating a clear point of contact, setting direction, and making sure we actually got it shipped.</p>
+
+        <div className="my-12">
+          <Image
+            src="/images/veed-localized.png"
+            alt="VEED localized in multiple languages"
+            width={1200}
+            height={800}
+            className="rounded-lg shadow-xl w-full"
+          />
+          <p className="text-sm text-gray-500 mt-2 text-center">VEED localized in multiple languages</p>
+        </div>
 
         <hr className="my-8" />
 

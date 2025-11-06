@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface ProjectCardProps {
   title: string
@@ -6,11 +7,23 @@ interface ProjectCardProps {
   tags: string[]
   icon?: string
   href?: string
+  image?: string
 }
 
-export function ProjectCard({ title, description, tags, icon, href }: ProjectCardProps) {
+export function ProjectCard({ title, description, tags, icon, href, image }: ProjectCardProps) {
   const cardContent = (
     <>
+      {image && (
+        <div className="mb-4 -mx-8 -mt-8">
+          <Image
+            src={image}
+            alt={title}
+            width={600}
+            height={400}
+            className="w-full h-48 object-cover rounded-t-2xl"
+          />
+        </div>
+      )}
       <div className="flex items-center gap-2 mb-4">
         {icon && <span className="text-2xl">{icon}</span>}
         <h3 className="text-2xl font-bold">{title}</h3>

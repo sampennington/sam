@@ -13,6 +13,15 @@ export function ProjectsSection() {
             tags={['Leadership', 'i18n', 'Automation']}
             icon="✍️"
             href="/blog/localizing-veed"
+            image="/images/veed-localized.png"
+          />
+          <ProjectCard
+            title="Volunteering and Teaching at CodeYourFuture"
+            description="Running a volunteer-led coding bootcamp for refugees and people from disadvantaged backgrounds. Led 40-50 students and 10-20 volunteers through an 8-month program teaching JavaScript, React, and Node."
+            tags={['Leadership', 'Teaching', 'Community']}
+            icon="👨‍🏫"
+            href="/blog/leading-cyf"
+            image="/images/cyf-veed.jpeg"
           />
         </div>
       </div>
