@@ -1,7 +1,7 @@
 
 const Section = ({ heading, body }: { heading: string, body: string }) => (
   <>
-    <h3 className="text-xl font-bold mb-2">{heading}</h3>
+    <h3 className="text-xl font-bold mb-2 text-accent">{heading}</h3>
     <p className="text-gray-800 mb-4">
       {body}
     </p>
