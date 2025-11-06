@@ -14,15 +14,15 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Sam Pennington',
+    template: '%s | Sam Pennington',
   },
-  description: 'This is my portfolio.',
+  description: 'Software Engineer, Manager, Scuba Diver',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Sam Pennington',
+    description: 'Software Engineer, Manager, Scuba Diver',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Sam Pennington',
     locale: 'en_US',
     type: 'website',
   },
@@ -36,6 +36,16 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 }
 

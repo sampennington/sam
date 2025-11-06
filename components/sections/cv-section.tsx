@@ -19,8 +19,8 @@ export function CVSection() {
             <div>
               <h4 className="text-2xl font-bold mb-4 border-b-2 border-orange-500 pb-2">About Me</h4>
               <p className="text-gray-700 leading-relaxed">
-                I'm an engineering leader who genuinely loves what I do. For the past three years I've worked in and led growth teams
-                where I get to combine programming, analytics, and plenty of collaboration. I had several promotions while working in growth,
+                I'm an engineering leader who genuinely loves what I do. For the past three years I've worked in and led teams
+                where I get to combine programming, analytics, and plenty of collaboration. I had several promotions while working in my last role,
                 but I've realised I'm happiest when I'm hands-on, building, solving problems, and experimenting alongside the team.
               </p>
             </div>
@@ -28,11 +28,11 @@ export function CVSection() {
             <div>
               <h4 className="text-2xl font-bold mb-4 border-b-2 border-orange-500 pb-2">Experience</h4>
               <div className="space-y-8">
-                {/* VEED.IO - Senior Software Engineer (Growth) */}
+                {/* VEED.IO - Senior Software Engineer  */}
                 <div>
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h5 className="text-xl font-bold">Senior Software Engineer (Growth)</h5>
+                      <h5 className="text-xl font-bold">Senior Software Engineer </h5>
                       <p className="text-gray-600">VEED.IO</p>
                     </div>
                     <p className="text-sm text-gray-500">Jul 2024 - Dec 2024</p>
@@ -50,34 +50,34 @@ export function CVSection() {
                     <li>Led the work to optimise first time user flows from landing pages, which increased new user subscriptions rates by 15%</li>
                     <li>Led the rebuild of VEED's onboarding flow, massively reduced its complexity and completion rate increased by 10%</li>
                     <li>Shipped multiple experiments most weeks, iterating on VEED's dashboard and first time user experience flows</li>
-                    <li>Mentored junior - mid engineers on testing and experimentation</li>
+                    <li>Mentored junior - mid engineers, particularly on testing and experimentation</li>
                   </ul>
                 </div>
 
-                {/* VEED.IO - Engineering Manager (Growth) */}
+                {/* VEED.IO - Engineering Manager  */}
                 <div>
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h5 className="text-xl font-bold">Engineering Manager (Growth)</h5>
+                      <h5 className="text-xl font-bold">Engineering Manager </h5>
                       <p className="text-gray-600">VEED.IO</p>
                     </div>
                     <p className="text-sm text-gray-500">Jan 2023 - Jul 2024</p>
                   </div>
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
                     <li>Promoted to EM of the Activation team, after became EM of Acquisition as well, managing up to 11 engineers</li>
-                    <li>Led two high-performing growth teams focused on continuous discovery, user interviews, experimentation, iterative shipping to drive growth</li>
                     <li>Led the project to internationalise VEED. Spanning 10+ engineering teams, 8 codebases with limited resources and a tight deadline. Delivered within the quarter (on time) and resulted in an increase in MRR of 8-15% in VEED's core international markets</li>
+                    <li>Led two high-performing growth teams focused on continuous discovery, user interviews, experimentation, iterative shipping to drive growth</li>
                     <li>Hired 8 amazing engineers - pushed for and designed a fairer, less bias interviewing system which was adopted across engineering</li>
                     <li>Led the team to build VeedGPT, an AI video creation tool. Accounting for up to 20% of new users at VEED at its peak</li>
                     <li>Migrated VEED's analytics/experimentation platform to Amplitude. Implemented the integration, wrote documentation, and became the go-to resource for everything experimentation at Veed</li>
                   </ul>
                 </div>
 
-                {/* VEED.IO - Engineering Lead (Growth) */}
+                {/* VEED.IO - Engineering Lead  */}
                 <div>
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h5 className="text-xl font-bold">Engineering Lead (Growth)</h5>
+                      <h5 className="text-xl font-bold">Engineering Lead </h5>
                       <p className="text-gray-600">VEED.IO</p>
                     </div>
                     <p className="text-sm text-gray-500">Jul 2022 - Jan 2023</p>
@@ -89,11 +89,11 @@ export function CVSection() {
                   </ul>
                 </div>
 
-                {/* VEED.IO - Senior Engineer (Growth) */}
+                {/* VEED.IO - Senior Engineer  */}
                 <div>
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h5 className="text-xl font-bold">Senior Engineer (Growth)</h5>
+                      <h5 className="text-xl font-bold">Senior Engineer </h5>
                       <p className="text-gray-600">VEED.IO</p>
                     </div>
                     <p className="text-sm text-gray-500">Apr 2022 - Jul 2022</p>
