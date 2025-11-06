@@ -15,18 +15,18 @@ export function ContactSection() {
               <div className="flex items-center gap-4">
                 <span className="text-2xl">📧</span>
                 <a href="mailto:sam@example.com" className="text-lg hover:text-orange-500 transition-colors">
-                  sam@example.com
+                  samueljpennington64@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-2xl">💼</span>
-                <a href="https://linkedin.com" className="text-lg hover:text-orange-500 transition-colors">
+                <a href="https://www.linkedin.com/in/sam-pennington-629227151/" className="text-lg hover:text-orange-500 transition-colors">
                   LinkedIn
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-2xl">🐙</span>
-                <a href="https://github.com" className="text-lg hover:text-orange-500 transition-colors">
+                <a href="https://github.com/sampennington" className="text-lg hover:text-orange-500 transition-colors">
                   GitHub
                 </a>
               </div>
