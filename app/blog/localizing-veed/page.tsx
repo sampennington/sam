@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function LocalizingVeedPost() {
   return (
-    <section className="min-h-screen px-8 md:px-16 lg:px-32 py-20 max-w-5xl mx-auto">
+    <section className="min-h-screen px-8 md:px-16 lg:px-32 py-20 max-w-5xl mx-auto text-black ">
       <Link
         href="/"
         className="inline-flex items-center gap-2 text-black hover:text-gray-700 transition-colors mb-8 group"

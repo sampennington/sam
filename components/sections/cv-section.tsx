@@ -2,7 +2,7 @@ export function CVSection() {
   return (
     <section id="cv" className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 py-20">
       <div className="max-w-5xl w-full">
-        <h2 className="text-5xl md:text-6xl font-bold mb-12">Curriculum Vitae</h2>
+        <h2 className="text-5xl md:text-6xl font-bold mb-12">My Latest CV</h2>
 
         <div className="bg-white/80 backdrop-blur-sm p-12 rounded-2xl shadow-lg">
           <div className="mb-12 text-center">

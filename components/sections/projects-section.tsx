@@ -4,7 +4,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 py-20">
       <div className="max-w-5xl w-full">
-        <h2 className="text-5xl md:text-6xl font-bold mb-12">Featured Projects & Writing</h2>
+        <h2 className="text-5xl md:text-6xl font-bold mb-12">Things I'm Proud Of</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ProjectCard
