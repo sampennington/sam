@@ -39,7 +39,7 @@ export default function LocalizingVeedPost() {
       <article className="prose prose-lg max-w-none text-black">
         <p>
           After speaking to many users whose native language was not English, I
-          thought localisation as a high-impact opportunity and pitched it to
+          thought localisation was a high-impact opportunity and pitched it to
           leadership.
         </p>
         <p>
